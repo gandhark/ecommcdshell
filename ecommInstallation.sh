@@ -22,6 +22,15 @@ if 		! which php > /dev/null; then
 		head -n3 /opt/rh/php55/enable>>.bash_profile
 		source ~/.bash_profile
 
+		head -n3 /opt/rh/httpd24/enable>>.bash_profile
+		source ~/.bash_profile
+
+
+
+
+
+
+
 
 		printf "\n\n\t"
 
@@ -100,44 +109,17 @@ else
    fi 
 fi
 
-setenforce 0
-
-/etc/init.d/httpd24-httpd status
-
-/etc/init.d/httpd24-httpd start
 
 
+####################3 httpd setup ########
 
+		printf "\n\n\t"
+		sleep 2
+		setenforce 0
 
+		/etc/init.d/httpd24-httpd status
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		/etc/init.d/httpd24-httpd start
 
 
 
