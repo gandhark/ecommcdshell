@@ -20,7 +20,9 @@ if 		! which php > /dev/null; then
 		yum -y install php55-php-pecl-xdebug
 		cd ~
 		head -n3 /opt/rh/php55/enable>>.bash_profile
-		source .bash_profile
+		source ~/.bash_profile
+
+
 		printf "\n\n\t"
 
 		sleep 2
@@ -57,7 +59,7 @@ if 		! which mysql>/dev/null; then
      			yum -y install mysql-server
 			/etc/init.d/mysqld start    			 
 			#service mysqld start
-			 mysql -u root -p $ROOTPW
+			 #mysql -u root -p $ROOTPW
     			 printf "\n\n"
 	
     		 sleep 3
@@ -72,7 +74,7 @@ if 		! which mysql>/dev/null; then
 	 	yum -y install mysql-server
     		 #service mysqld start
 		/etc/init.d/mysqld start   
-		 mysql -u root -p $2
+		 #mysql -u root -p $2
 		
 
 	 mysql -u root -p$2 
@@ -88,13 +90,13 @@ else
      printf "\n\n"  
     # service mysqld start
 	/etc/init.d/mysqld start   
-     mysql -u root -p$ROOTPW 
+    # mysql -u root -p$ROOTPW 
 	
    else
 	 echo "MySQL Password Supplied... Using Supplied MySQL Password to create database..." 
      #service mysqld start
      /etc/init.d/mysqld start   
-	mysql -u root -p$2 
+	#mysql -u root -p$2 
    fi 
 fi
 
