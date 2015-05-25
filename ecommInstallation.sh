@@ -27,6 +27,7 @@ if 		! which php > /dev/null; then
 
 
 
+
 else
 
 	echo "php is installed"
@@ -54,7 +55,8 @@ if 		! which mysql>/dev/null; then
 	   	if 	[ $# -eq 0 ]; then
 			 echo "No arguments supplied... Using default MySQL Root Password..."
      			yum -y install mysql-server
-    			 service mysqld start
+			/etc/init.d/mysqld start    			 
+			#service mysqld start
 			 mysql -u root -p $ROOTPW
     			 printf "\n\n"
 	
