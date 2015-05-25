@@ -41,6 +41,7 @@ db="show databases";
      echo "**********************************************************************"
      sleep 3
      printf "\n\n"
+	echo $2
      mysql -u root -p$2 -e $db
    fi 
 
