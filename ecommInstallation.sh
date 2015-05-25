@@ -100,8 +100,11 @@ else
    fi 
 fi
 
+setenforce 0
 
+/etc/init.d/httpd24-httpd status
 
+/etc/init.d/httpd24-httpd start
 
 
 
