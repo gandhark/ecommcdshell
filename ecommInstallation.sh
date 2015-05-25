@@ -15,9 +15,9 @@ if 		! which php > /dev/null; then
 
 		sleep 2
 		yum clean all
-		yum install php55-php
-		yum install php55-php-mysql
-		yum install php55-php-pecl-xdebug
+		yum -y install php55-php
+		yum -y install php55-php-mysql
+		yum -y install php55-php-pecl-xdebug
 
 		head -n3 /opt/rh/php55/enable>>.bash_profile
 
