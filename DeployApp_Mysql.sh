@@ -15,7 +15,7 @@ DBPASS=sonar
 IPADDRESS=`ip route get 8.8.8.8 | awk '{ print $NF; exit }'`
 SONAR_VERSION=$3
 MACHINE_TYPE=`getconf LONG_BIT`
-
+db="show databases";
 ##### Script to install SonarQube and Sonar-Runner and Configure them (On RPM based systems only) #####
    echo "MySQL is installed."
    sleep 3
@@ -27,11 +27,11 @@ MACHINE_TYPE=`getconf LONG_BIT`
      /etc/init.d/mysqld start
  
      echo "**********************************************************************"
-     echo "Creating Sonar Database..."
+     echo "Opening mysql command prompt..."
      echo "**********************************************************************"
      sleep 3
      printf "\n\n"
-     mysql -u root -p$ROOTPW 
+     mysql -u root -p$ROOTPW -e $db
 	
    else
 	 echo "MySQL Password Supplied... Using Supplied MySQL Password to create database..." 
@@ -41,7 +41,7 @@ MACHINE_TYPE=`getconf LONG_BIT`
      echo "**********************************************************************"
      sleep 3
      printf "\n\n"
-     mysql -u root -p$2 
+     mysql -u root -p$2 -e $db
    fi 
 
 
