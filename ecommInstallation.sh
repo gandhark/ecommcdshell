@@ -70,7 +70,8 @@ if 		! which mysql>/dev/null; then
 
      	echo "Arguments Supplied... Using provided MySQL Password..."
 	 	yum -y install mysql-server
-    		 service mysqld start
+    		 #service mysqld start
+		/etc/init.d/mysqld start   
 		 mysql -u root -p $2
 		
 
@@ -85,13 +86,15 @@ else
      echo "MySQL Password not supplied... Using default MySQL Password..."
      sleep 3
      printf "\n\n"  
-     service mysqld start
+    # service mysqld start
+	/etc/init.d/mysqld start   
      mysql -u root -p$ROOTPW 
 	
    else
 	 echo "MySQL Password Supplied... Using Supplied MySQL Password to create database..." 
-     service mysqld start
-     mysql -u root -p$2 
+     #service mysqld start
+     /etc/init.d/mysqld start   
+	mysql -u root -p$2 
    fi 
 fi
 
