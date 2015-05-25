@@ -6,7 +6,7 @@
 #1.	Script only runs on CentOS [RPM based systems].
 #2.	Mysql-Server should already be installed and running.
 
-ROOTPW=""
+ROOTPW="password"
 
 
 
