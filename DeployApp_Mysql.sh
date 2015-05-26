@@ -8,7 +8,7 @@
 
 ##### Declare variables ##### 
 
-ROOTPW=
+ROOTPW=password
 DBNAME=sonar
 DBUSER=sonar
 DBPASS=sonar
