@@ -8,7 +8,7 @@
 
 ##### Declare variables ##### 
 
-ROOTPW=redhat
+ROOTPW=
 DBNAME=sonar
 DBUSER=sonar
 DBPASS=sonar
@@ -42,6 +42,7 @@ db="show databases";
      sleep 3
      printf "\n\n"
 	echo $2
+echo "$2 is"
      mysql -u root -p$2 -e $db
    fi 
 
