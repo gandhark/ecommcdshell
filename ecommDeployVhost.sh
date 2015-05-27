@@ -1,5 +1,9 @@
 #!/bin/bash
 
+
+unzip   -do  /opt/rh/httpd24/root/var/www/html/ecomm_project ecomm_project.zip  
+cd /opt/rh/httpd24/root/var/www/html/
+chmod -R 777 ecomm_project
  echo  "127.0.0.1 ecomm_project">> /etc/hosts
 echo "Creating VHOST file "
  echo '<VirtualHost *:80>
@@ -23,8 +27,8 @@ echo "Creating VHOST file "
 
  /etc/init.d/httpd24-httpd restart
 
- firefox -new-window ecomm_project
+ #firefox -new-window ecomm_project
 echo "Hurrah! Got success"
-cd /opt/rh/httpd24/root/etc/httpd/conf.d/
-rm -rf ecomm_project.conf
+#cd /opt/rh/httpd24/root/etc/httpd/conf.d/
+#rm -rf ecomm_project.conf
 
