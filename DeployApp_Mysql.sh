@@ -8,7 +8,7 @@
 
 ##### Declare variables ##### 
 
-ROOTPW=password
+ROOTPW=root
 DBNAME=sonar
 DBUSER=sonar
 DBPASS=sonar
@@ -36,6 +36,7 @@ db="show databases";
    else
 	 echo "MySQL Password Supplied... Using Supplied MySQL Password to create database..." 
      service mysqld start
+	
 	 echo "**********************************************************************"
      echo "Creating Sonar Database..."
      echo "**********************************************************************"
