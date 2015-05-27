@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-unzip   -d -o  /opt/rh/httpd24/root/var/www/html/ecomm_project ecomm_project.zip  
+unzip   -d  /opt/rh/httpd24/root/var/www/html/ecomm_project ecomm_project.zip  
 cd /opt/rh/httpd24/root/var/www/html/
 chmod -R 777 ecomm_project
  echo  "127.0.0.1 ecomm_project">> /etc/hosts
