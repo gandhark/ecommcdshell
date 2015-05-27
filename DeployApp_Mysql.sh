@@ -31,7 +31,7 @@ db="show databases;"
      echo "**********************************************************************"
      sleep 3
      printf "\n\n"
-     mysql -u root -p$ROOTPW -e $db
+     mysql -u root -p$ROOTPW -e "show databases;"
 	
    else
 	 echo "MySQL Password Supplied... Using Supplied MySQL Password to create database..." 
@@ -44,7 +44,7 @@ db="show databases;"
      printf "\n\n"
 	echo $2
 echo "$2 is"
-     mysql -u root -p$2 -e $db
+     mysql -u root -p$2 -e "show databases;"
    fi 
 
 
