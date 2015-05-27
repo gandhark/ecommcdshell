@@ -31,7 +31,8 @@ db="show databases;"
      echo "**********************************************************************"
      sleep 3
      printf "\n\n"
-     mysql -u root -p$ROOTPW -e "show databases;"
+     #mysql -u root -p$ROOTPW -e "show databases;"
+	mysql -u root -p$ROOTPW < ecommsql.sql
 	
    else
 	 echo "MySQL Password Supplied... Using Supplied MySQL Password to create database..." 
