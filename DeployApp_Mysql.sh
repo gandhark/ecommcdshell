@@ -15,7 +15,7 @@ DBPASS=sonar
 IPADDRESS=`ip route get 8.8.8.8 | awk '{ print $NF; exit }'`
 SONAR_VERSION=$3
 MACHINE_TYPE=`getconf LONG_BIT`
-db="show databases";
+db="show databases;"
 ##### Script to install SonarQube and Sonar-Runner and Configure them (On RPM based systems only) #####
    echo "MySQL is installed."
    sleep 3
