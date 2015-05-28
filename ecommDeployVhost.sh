@@ -1,9 +1,8 @@
 #!/bin/bash
-cd /opt/rh/httpd24/root/var/www/html/
-
-rm -rf ./*
-unzip   -d  /opt/rh/httpd24/root/var/www/html/ecomm_project ecomm_project.zip  
 #cd /opt/rh/httpd24/root/var/www/html/
+#rm -rf ./*
+unzip   -d  /opt/rh/httpd24/root/var/www/html/ecomm_project ecomm_project.zip  
+cd /opt/rh/httpd24/root/var/www/html/
 chmod -R 777 ecomm_project
  echo  "127.0.0.1 ecomm_project">> /etc/hosts
 echo "Creating VHOST file "
