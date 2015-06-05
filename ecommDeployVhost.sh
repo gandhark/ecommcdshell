@@ -1,6 +1,6 @@
 #!/bin/bash
 #cd /opt/rh/httpd24/root/var/www/html/
-#rm -rf ./*
+rm -rf /opt/rh/httpd24/root/var/www/html/ecomm_project
 unzip   -d  /opt/rh/httpd24/root/var/www/html/ecomm_project ecomm_project.zip  
 cd /opt/rh/httpd24/root/var/www/html/
 chmod -R 777 ecomm_project
